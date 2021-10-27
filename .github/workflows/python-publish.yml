@@ -28,5 +28,5 @@ jobs:
     - name: run
       env:
           username: ${{ secrets.username }}
-          passport: ${{ secrets.passport }}
+          password: ${{ secrets.password }}
       run: python xd-daily.py
