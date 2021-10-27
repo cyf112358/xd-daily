@@ -14,7 +14,7 @@ on:
     - cron: '0 5 * * *'
 
 jobs:
-  deploy:
+  run:
 
     runs-on: ubuntu-latest
 
