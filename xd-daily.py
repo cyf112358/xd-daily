@@ -9,9 +9,9 @@ url="https://xxcapp.xidian.edu.cn/uc/wap/login/check"
 p1=requests.Session()
 p2=p1.post(url,headers = headers,data={"username":username,"password":password},timeout=10)
 if(p2.status_code!=200):
-    assert Exception;
+    raise Exception('不明原因失败');
 p2=p1.post("https://xxcapp.xidian.edu.cn/xisuncov/wap/open-report/save",headers=headers,data=data,timeout=10)
 if(p2.status_code!=200):
-    assert Exception;
+    raise Exception('不明原因失败');
 a=json.loads(p2.text)
 print(a['m'])
